@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>登录</title>
   <link rel="icon" href="data:;base64,="/>
-  <link rel="stylesheet" type="text/css" href="static/css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/demo.css" />
   <!--必要样式-->
-  <link rel="stylesheet" type="text/css" href="static/css/component.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/component.css" />
 
 </head>
 <body>
@@ -44,12 +44,12 @@
 <script src="static/js/EasePack.min.js"></script>
 <script src="static/js/rAF.js"></script>
 -->
-<script src="static/js/demo-1.js"></script>
-<script src="static/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="static/js/login.js" ></script>
+<script src="/static/js/demo-1.js"></script>
+<script src="/static/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/static/js/login.js" ></script>
 <script type="text/javascript">
     {{if .status}}
-    alert({;{.result}})
+    alert({{.result}})
     {{end}}
 </script>
 </html>

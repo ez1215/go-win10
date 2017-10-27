@@ -14,11 +14,17 @@ func (c *UserController) Login() {
 	var username string = c.GetString("username")
 	var passwrod string = c.GetString("password")
 
+	if(username == "" || passwrod==""){
+		c.TplName = "index.tpl"
+		c.Data["result"] = "用户名或密码错误"
+		c.Data["status"] = true
+		return
+	}
 	log.Println(username)
 	user, err := CheckUser(username, passwrod)
 
 	if err != nil {
-		log.Println(err)
+		log.Println("查询用户异常",err)
 		c.TplName = "index.tpl"
 		c.Data["result"] = "用户名或密码错误"
 		c.Data["status"] = true
