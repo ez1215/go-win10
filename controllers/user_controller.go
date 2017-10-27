@@ -39,7 +39,7 @@ func (c *UserController) Login() {
 }
 
 func (c *UserController) UserCenter() {
-	c.TplName = "usercenter.tpl"
+	c.TplName = "main.tpl"
 	u := c.GetSession("user")
 	log.Println(u)
 	c.Data["user"] = u
