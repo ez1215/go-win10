@@ -4,7 +4,6 @@ import (
 	"github.com/astaxie/beego"
 	"log"
 	. "go-win10/models"
-	"time"
 )
 
 type UserController struct {
@@ -13,7 +12,6 @@ type UserController struct {
 
 func (c *UserController) ToIndex()  {
 	log.Println("注销")
-	time.Sleep(0.3 * 1e9)
 	c.TplName = "login.tpl"
 }
 
