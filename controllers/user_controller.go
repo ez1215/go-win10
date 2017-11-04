@@ -22,7 +22,7 @@ func (c *UserController) Login() {
 	var passwrod string = c.GetString("password")
 
 	if(username == "" || passwrod==""){
-		c.TplName = "index.tpl"
+		c.TplName = "login.tpl"
 		c.Data["result"] = "用户名或密码错误"
 		c.Data["status"] = true
 		return
@@ -32,7 +32,7 @@ func (c *UserController) Login() {
 
 	if err != nil {
 		log.Println("查询用户异常",err)
-		c.TplName = "index.tpl"
+		c.TplName = "login.tpl"
 		c.Data["result"] = "用户名或密码错误"
 		c.Data["status"] = true
 		return
