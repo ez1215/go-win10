@@ -91,7 +91,7 @@
                 <div class="title">扫雷</div>
             </div>
             <div class="shortcut" onclick='Win10.openUrl("/sankbox","<i class=\"fa fa-viadeo icon black-green\"></i>推箱子","max")'>
-                <i class="fa fa-eye icon black-red"></i>
+                <img class="icon" src="/static/img/sankbox/box.jpg"/>
                 <div class="title">推箱子</div>
             </div>
             <div class="shortcut" onclick='Win10.openUrl("/lianliankan","<i class=\"fa fa-viadeo icon black-green\"></i>连连看","max")'>
