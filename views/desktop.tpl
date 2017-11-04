@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-    <title>WIN10-UI</title>
+    <title>{{.user.Nickname}},欢迎你</title>
     <link rel='Shortcut Icon' type='image/x-icon' href='/static/img/windows.ico'>
     <script type="text/javascript" src="/static/js/jquery-2.2.4.min.js"></script>
     <link href="/static/css/animate.css" rel="stylesheet">
