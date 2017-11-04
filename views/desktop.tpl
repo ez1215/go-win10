@@ -24,6 +24,9 @@
         }
     </style>
     <script>
+        $.ajaxSetup({
+            async: false
+        });
         Win10.onReady(function () {
 
             //设置壁纸
@@ -75,42 +78,38 @@
 <div id="win10">
     <div class="desktop">
         <div id="win10-shortcuts" class="shortcuts-hidden">
-            <div class="shortcut" onclick="Win10.openUrl('http://win10ui.yuri2.cn','<img class=\'icon\' src=\'/static/img/icon/win10.png\'/>Win10-UI官网')">
-                <img class="icon" src="/static/img/icon/win10.png"/>
-                <div class="title">Win10-UI官网</div>
+            <div class="shortcut" onclick="Win10.openUrl('/snake','<img class=\'icon\' src=\'/static/img/snake.png\'/>贪吃蛇','max')">
+                <img class="icon" src="/static/img/snake.png"/>
+                <div class="title">贪吃蛇</div>
             </div>
-            <div class="shortcut" onclick="Win10.openUrl('https://yuri2.cn','<img class=\'icon\' src=\'/static/img/icon/blogger.png\'/>尤里2号的博客')">
-                <img class="icon" src="/static/img/icon/blogger.png"/>
-                <div class="title">Yuri2's Blog</div>
+            <div class="shortcut" onclick='Win10.openUrl("/tank","<i class=\"fa fa-viadeo icon black-green\"></i>坦克大战","max")'>
+                <img class="icon" src="/static/img/tank.png"/>
+                <div class="title">坦克大战</div>
             </div>
-            <div class="shortcut" onclick="Win10.openUrl('win10ui.yuri2.cn/src/doc.php','<img class=\'icon\' src=\'/static/img/icon/doc.png\'/>在线文档')">
-                <img class="icon" src="/static/img/icon/doc.png"/>
-                <div class="title">在线文档</div>
+            <div class="shortcut" onclick='Win10.openUrl("/thunder","<i class=\"fa fa-viadeo icon black-green\"></i>扫雷","max")'>
+                <img class="icon" src="/static/img/thunder.png"/>
+                <div class="title">扫雷</div>
             </div>
-            <div class="shortcut" onclick="window.open('https://github.com/yuri2peter/win10-ui')">
-                <img class="icon" src="/static/img/icon/github.png"/>
-                <div class="title">github</div>
+            <div class="shortcut" onclick='Win10.openUrl("/sankbox","<i class=\"fa fa-viadeo icon black-green\"></i>推箱子","max")'>
+                <i class="fa fa-eye icon black-red"></i>
+                <div class="title">推箱子</div>
             </div>
-            <div class="shortcut" onclick="Win10.openUrl('https://www.oschina.net/p/win10-ui','<img class=\'icon\' src=\'/static/img/icon/kyzg.png\'/>开源中国（求支持~）')">
-                <img class="icon" src="/static/img/icon/kyzg.png"/>
-                <div class="title">开源中国</div>
+            <div class="shortcut" onclick='Win10.openUrl("/lianliankan","<i class=\"fa fa-viadeo icon black-green\"></i>连连看","max")'>
+                <i class="fa fa-eye icon black-red"></i>
+                <div class="title">连连看</div>
             </div>
-            <div class="shortcut" onclick="window.open('https://github.com/yuri2peter/win10-ui/archive/master.zip')">
-                <img class="icon" src="/static/img/icon/download.png"/>
-                <div class="title">快速获取</div>
+            <div class="shortcut" onclick='Win10.openUrl("/jfcz","<i class=\"fa fa-viadeo icon black-green\"></i>见缝插针","max")'>
+                <i class="fa fa-bolt icon black-red"></i>
+                <div class="title">见缝插针</div>
             </div>
-            <div class="shortcut" onclick='Win10.openUrl("./login.html","<i class=\"fa fa-user icon black-green\"></i>示例登录页")'>
-                <i class="fa fa-user icon black-green"></i>
-                <div class="title">示例登录页</div>
-            </div>
-            <div class="shortcut win10-open-window" data-url="win10ui.yuri2.cn/src/contributor.php">
-                <i class="icon fa fa-fw fa-bank red" ></i>
-                <div class="title">名人堂</div>
+            <div class="shortcut" onclick='Win10.openUrl("/butterfly","<i class=\"fa fa-viadeo icon black-green\"></i>蝴蝶","max")'>
+                <i class="fa fa-viadeo icon black-red"></i>
+                <div class="title">蝴蝶</div>
             </div>
 
-            <div class="shortcut" onclick='Win10.openUrl("win10ui.yuri2.cn/src/workshop.php","<i class=\"fa fa-gears  icon purple\"></i>创意工坊")'>
-                <i class="fa fa-gears  icon purple"></i>
-                <div class="title">创意工坊</div>
+            <div class="shortcut" onclick='Win10.openUrl("/flower","<i class=\"fa fa-user icon black-green\"></i>玫瑰花","max")'>
+                <img class="icon" src="/static/img/rose.png"/>
+                <div class="title">玫瑰花</div>
             </div>
         </div>
         <div id="win10-desktop-scene"></div>
@@ -127,6 +126,7 @@
             <div class="sub-item" onclick="Win10.openUrl('win10ui.yuri2.cn/src/tools/builder-tile.html','磁贴代码生成器')">磁贴代码生成器</div>
             <div class="sub-item" onclick="Win10.openUrl('win10ui.yuri2.cn/src/tools/builder-menu.html','菜单代码生成器')">菜单代码生成器</div>
             <div class="item" onclick="Win10.aboutUs()"><i class="purple icon fa fa-info-circle fa-fw"></i>关于</div>
+            <!--
             <div class="item" onclick="layer.open({
                 title:'支持作者',
                 type: 1,
@@ -135,6 +135,8 @@
                 shadeClose:true,
                 content: '<img width=\'300\' src=\'/static/img/presentation/donation.jpg\' />'
             })"><i class="green icon fa fa-thumbs-up fa-fw"></i>捐赠</div>
+            -->
+            <div class="item" onclick=" Win10.logOut();"><i class="black icon fa fa-key fa-fw"></i>注销</div>
             <div class="item" onclick=" Win10.exit();"><i class="black icon fa fa-power-off fa-fw"></i>关闭</div>
         </div>
         <div class="blocks">

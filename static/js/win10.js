@@ -832,7 +832,6 @@ window.Win10 = {
     exit:function () {
         layer.confirm(Win10.lang('确认要关闭本页吗?','Are you sure you want to close this page?'), {icon: 3, title:Win10.lang('提示','Prompt')}, function(index){
             document.body.onbeforeunload = function(){};
-            window.location.href="about:blank";
             window.close();
             layer.close(index);
             layer.alert(Win10.lang('哎呀,好像失败了呢。','Ops...There seems to be a little problem.'), {
@@ -841,6 +840,28 @@ window.Win10 = {
             });
         });
 
+    },
+    logOut:function () {
+        layer.confirm(Win10.lang('确认要注销吗?','Are you sure you want to logout ?'), {icon: 3, title:Win10.lang('提示','Prompt')}, function(index){
+            document.body.onbeforeunload = function(){};
+            var fl = false;
+            $.post("/logout",function (data) {
+                if(data=="ok"){
+                    // window.location.href="/index";
+                    fl = true;
+                }
+            });
+            if(fl){
+                window.location.href="/index";
+            }else{
+                window.close();
+                layer.close(index);
+                layer.alert(Win10.lang('哎呀,好像失败了呢。','Ops...There seems to be a little problem.'), {
+                    skin: 'layui-layer-lan'
+                    ,closeBtn: 0
+                });
+            }
+        });
     },
     lang:function (cn,en) {
         return this._lang==='zh-cn'||this._lang==='zh-tw'?cn:en;

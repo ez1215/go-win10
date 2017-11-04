@@ -4,10 +4,17 @@ import (
 	"github.com/astaxie/beego"
 	"log"
 	. "go-win10/models"
+	"time"
 )
 
 type UserController struct {
 	beego.Controller
+}
+
+func (c *UserController) ToIndex()  {
+	log.Println("注销")
+	time.Sleep(0.3 * 1e9)
+	c.TplName = "login.tpl"
 }
 
 func (c *UserController) Login() {
@@ -34,12 +41,20 @@ func (c *UserController) Login() {
 	if user != nil {
 		c.SetSession("user", user)
 		log.Println("登录成功")
-		c.Ctx.Redirect(302, "/user/userCenter")
+		c.Ctx.Redirect(302, "/desktop")
 	}
 }
 
-func (c *UserController) UserCenter() {
-	c.TplName = "main.tpl"
+func (c *UserController) LogOut()  {
+	var u  = c.GetSession("user");
+	log.Println("注销用户",u)
+	c.DelSession("user")
+	c.Data["json"] = "ok"
+	c.ServeJSON()
+}
+
+func (c *UserController) Desktop() {
+	c.TplName = "desktop.tpl"
 	u := c.GetSession("user")
 	log.Println(u)
 	c.Data["user"] = u
