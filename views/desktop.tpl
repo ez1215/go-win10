@@ -111,6 +111,11 @@
                 <img class="icon" src="/static/img/rose.png"/>
                 <div class="title">玫瑰花</div>
             </div>
+
+            <div class="shortcut" onclick='Win10.openUrl("/block","<i class=\"fa fa-user icon black-green\"></i>俄罗斯方块","max")'>
+                <img class="icon" src="/static/img/block.png"/>
+                <div class="title">俄罗斯方块</div>
+            </div>
         </div>
         <div id="win10-desktop-scene"></div>
     </div>

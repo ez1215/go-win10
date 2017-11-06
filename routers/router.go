@@ -21,5 +21,7 @@ func init() {
 	beego.Router("/thunder", &controllers.GameController{},"get:Thunder")
 	beego.Router("/tank", &controllers.GameController{},"get:Tank")
 	beego.Router("/snake", &controllers.GameController{},"get:Snake")
+	beego.Router("/block", &controllers.GameController{},"get:Block")
+
 
 }

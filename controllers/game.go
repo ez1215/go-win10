@@ -48,3 +48,8 @@ func (c *GameController) Snake()  {
 	log.Println("贪吃蛇")
 	c.TplName = "snake.tpl"
 }
+
+func (c *GameController) Block()  {
+	log.Println("俄罗斯方块")
+	c.TplName = "block.tpl"
+}
