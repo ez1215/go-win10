@@ -15,7 +15,7 @@
 <body>
 <div class="container demo-1">
   <div class="content">
-    <div id="large-header" class="large-header">
+    <div id="large-header" class="large-header" style="background-image: url('/static/img/login-bg1.jpg');">
       <a href="qq" class="chat">toChat</a>
       <!--
       <canvas id="demo-canvas"></canvas>
@@ -44,9 +44,10 @@
 <script src="static/js/EasePack.min.js"></script>
 <script src="static/js/rAF.js"></script>
 -->
-<script src="/static/js/demo-1.js"></script>
 <script src="/static/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="/static/js/login.js" ></script>
+<script src="/static/js/jquery.backstretch.min.js"></script>
+<script src="/static/js/login.js"></script>
+<script src="/static/js/login-sub.js"></script>
 <script type="text/javascript">
     {{if .status}}
     alert({{.result}})
