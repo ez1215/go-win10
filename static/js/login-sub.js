@@ -1,5 +1,5 @@
 $(function () {
-    var bg_img = ['/static/img/login-bg1.jpg','/static/img/login-bg2.jpg','/static/img/login-bg3.jpg','/static/img/login-bg4.jpg'];
+    var bg_img = ['/static/img/login-bg1.jpg','/static/img/login-bg2.jpg','/static/img/login-bg3.jpg','/static/img/login-bg4.jpg','/static/img/login-bg5.jpg'];
     var index=0;
 
     $.backstretch(bg_img[index],{transitionDuration:800});
