@@ -8,7 +8,7 @@ $(function () {
         index=(index>=bg_img.length-1)?0:index+1;
 //            $.backstretch(bg_img[index]);
         $('#large-header').css('background-image','url('+bg_img[index]+')');
-    },15000);
+    },5000);
 })
 
 //回车事件
